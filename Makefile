@@ -1,7 +1,7 @@
 all: lights
 
-lights: main.cpp
-	g++ -O3 -Wall -Wextra -pedantic -o lights main.cpp
+lights: main.c
+	gcc -O3 -Wall -Wextra -pedantic -o lights main.c
 
 .PHONY: clean
 clean:

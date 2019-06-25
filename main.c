@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-static const unsigned int sec_per_min = 60;
-static const unsigned int min_per_hour = 60;
-static const unsigned int hour_per_day = 24;
-static const unsigned int sec_per_hour = sec_per_min * min_per_hour;
-static const unsigned int sec_per_day = sec_per_hour * hour_per_day;
+#define sec_per_min     60
+#define min_per_hour    60
+#define hour_per_day    24
+#define sec_per_hour    (sec_per_min * min_per_hour)
+#define sec_per_day     (sec_per_hour * hour_per_day)
 
-unsigned int sec_in_h(unsigned int x) { return sec_per_hour * x; }
-unsigned int sec_in_m(unsigned int x) { return sec_per_min * x; }
+#define sec_in_h(x)     (sec_per_hour * x)
+#define sec_in_m(x)     (sec_per_min * x)
 
 unsigned int *set_compare_row(
         unsigned int value, unsigned int *pos, unsigned int num)
